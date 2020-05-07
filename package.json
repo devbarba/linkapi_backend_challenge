@@ -18,7 +18,10 @@
     "@types/errorhandler": "^1.5.0",
     "@types/express": "^4.17.6",
     "@types/jsonwebtoken": "^8.3.9",
+    "@types/kue": "^0.11.13",
     "@types/mongoose": "^5.7.14",
+    "@types/node-cron": "^2.0.3",
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -28,8 +31,12 @@
     "express-async-errors": "^3.1.1",
     "express-validator": "^6.4.1",
     "jsonwebtoken": "^8.5.1",
+    "kue": "^0.11.6",
+    "kue-ui": "^0.1.0",
     "mongodb": "^3.5.7",
-    "mongoose": "^5.9.11"
+    "mongoose": "^5.9.11",
+    "node-cron": "^2.0.3",
+    "querystring": "^0.2.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
