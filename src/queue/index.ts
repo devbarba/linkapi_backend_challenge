@@ -1,6 +1,7 @@
 import kue, { Job, DoneCallback } from 'kue';
 import Config from '../configs';
 import PipeDriveImportDeals from '../Jobs/PipeDriveImportDeals';
+import BlingCreateOrders from '../Jobs/BlingCreateOrders';
 
 const redisConfig = new Config().redis;
 
@@ -23,7 +24,7 @@ Queue.process('pipedrive', 1, async (job: Job, done: DoneCallback) => {
 
 Queue.process('bling', 1, async (job: Job, done: DoneCallback) => {
     try {
-        //
+        BlingCreateOrders(job);
     } catch (error) {}
 
     done();

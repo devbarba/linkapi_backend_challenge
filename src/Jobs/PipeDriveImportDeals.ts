@@ -7,8 +7,7 @@ class PipeDriveImportDeals {
             const getDealService = await new GetDealService().getDeals();
 
             getDealService.forEach((deal) => {
-                console.log(deal);
-                // Queue.create('bling', deal).removeOnComplete(true).save();
+                Queue.create('bling', deal).removeOnComplete(true).save();
             });
         } catch (error) {
             console.log(error);
