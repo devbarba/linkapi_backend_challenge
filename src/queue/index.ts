@@ -2,7 +2,6 @@ import kue, { Job, DoneCallback } from 'kue';
 import Config from '../configs';
 import PipeDriveImportDealsJob from '../Jobs/PipeDriveImportDealsJob';
 import BlingCreateOrdersJob from '../Jobs/BlingCreateOrdersJob';
-import SaveDataJob from '../Jobs/SaveDataJob';
 
 const redisConfig = new Config().redis;
 
