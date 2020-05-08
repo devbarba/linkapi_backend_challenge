@@ -1,7 +1,7 @@
 import Queue from '../queue';
 import GetDealService from '../services/GetDealService';
 
-class PipeDriveImportDeals {
+class PipeDriveImportDealsJob {
     async handle() {
         try {
             const getDealService = await new GetDealService().getDeals();
@@ -15,4 +15,4 @@ class PipeDriveImportDeals {
     }
 }
 
-export default new PipeDriveImportDeals().handle;
+export default new PipeDriveImportDealsJob().handle;

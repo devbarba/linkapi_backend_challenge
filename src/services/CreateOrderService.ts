@@ -1,3 +1,4 @@
+import Deal from '../models/Deal';
 import blingApi, { blingConfigKey } from '../utils/blingApi';
 import AppError from '../errors/AppError';
 import {
@@ -33,6 +34,22 @@ class CreateOrderService {
 
         if (data.retorno.erros && data.retorno.erros.length)
             throw new AppError(400, data.retorno.erros[0].erro.msg);
+
+        const verifyDeal = await Deal.findOne({
+            dealId: payload.id.toString(),
+        });
+
+        if (!verifyDeal) {
+            await Deal.create({
+                dealId: payload.id,
+                dealName: payload.title,
+                clientName: payload.person_name,
+                status: payload.status,
+                date: payload.update_time,
+                value: payload.value,
+                currency: payload.currency,
+            });
+        }
 
         return data;
     }
