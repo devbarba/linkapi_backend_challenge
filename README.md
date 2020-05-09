@@ -48,6 +48,10 @@ First of all, I would like to thank the opportunity to be able to take the test 
 
     I used some libs for formatting, indenting and standardizing code.
 
+-   **BACKGROUND JOBS**
+
+    I have 1 Job that runs for a cron every 10 minutes, which captures the pipedrive offers with a status of 'earned' and then they are sent to a job that performs the insertion of the offer in the bling as a sales order and also saves it to MongoDB.
+
 # End-points
 
 ### Token
