@@ -61,7 +61,7 @@ class App {
     }
 
     private crons() {
-        cronJob.schedule('*/1 * * * *', () => {
+        cronJob.schedule('*/10 * * * *', () => {
             Queue.create('pipedrive', 1).removeOnComplete(true).save();
         });
     }
