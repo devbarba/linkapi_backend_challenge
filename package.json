@@ -36,7 +36,7 @@
         "jstoxml": "^1.6.6",
         "kue": "^0.11.6",
         "kue-ui": "^0.1.0",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.19",
         "mongo-seeding": "^3.4.1",
         "mongodb": "^3.5.7",
         "mongoose": "^5.9.11",
